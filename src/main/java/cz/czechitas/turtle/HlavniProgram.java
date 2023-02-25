@@ -16,7 +16,7 @@ public class HlavniProgram {
 
         zofka.setLocation(400,500);
 
-       nakresliCtverec(150, Color.yellow);
+        nakresliCtverec(150, Color.yellow);
 
         zofka.setLocation(700,500);
 
@@ -28,7 +28,7 @@ public class HlavniProgram {
 
     }
 
-    private void nakresliObdelnik(float delkaStranyA, float delkaStranyB, Color barva) {
+    private void nakresliObdelnik(double delkaStranyA, double delkaStranyB, Color barva) {
         for (int i = 0; i < 2; i++) {
             zofka.setPenColor(barva);
             zofka.move(delkaStranyA);
@@ -38,7 +38,7 @@ public class HlavniProgram {
         }
     }
 
-    private void nakresliCtverec(float delkaStrany, Color barva) {
+    private void nakresliCtverec(double delkaStrany, Color barva) {
         for (int i = 0; i < 4; i++) {
             zofka.setPenColor(barva);
             zofka.move(delkaStrany);
@@ -46,7 +46,7 @@ public class HlavniProgram {
         }
     }
 
-    private void nakresliRovnostrannyTrojuhelnik(float delkaStarany, Color barva) {
+    private void nakresliRovnostrannyTrojuhelnik(double delkaStarany, Color barva) {
         for (int i = 0; i < 3; i++) {
             zofka.setPenColor(barva);
             zofka.move(delkaStarany);
@@ -54,7 +54,7 @@ public class HlavniProgram {
         }
     }
 
-    private void nakresliKruznici(float delkaStrany, Color barva) {
+    private void nakresliKruznici(double delkaStrany, Color barva) {
         for (int i = 0; i < 360; i++) {
             zofka.setPenColor(barva);
             zofka.move(delkaStrany);
@@ -63,7 +63,7 @@ public class HlavniProgram {
         }
     }
 
-    private void pulkruh (float delkaStrany, Color barva) {
+    private void pulkruh (double delkaStrany, Color barva) {
         zofka.setPenColor(barva);
         for (int i = 0; i <180; i++) {
             zofka.move(delkaStrany);
