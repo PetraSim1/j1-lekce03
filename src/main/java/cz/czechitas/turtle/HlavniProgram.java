@@ -10,21 +10,108 @@ public class HlavniProgram {
     public void start() {
         zofka = new Turtle();
 
-        zofka.setLocation(100,500);
+        //zmrzlina
 
-        nakresliRovnostrannyTrojuhelnik(300, Color.green);
+        zofka.setLocation(100,400);
 
-        zofka.setLocation(400,500);
+        nakresliKruznici(2,Color.pink);
 
-        nakresliCtverec(150, Color.yellow);
+        zofka.turnRight(90);
+        zofka.setLocation(100,430);
 
-        zofka.setLocation(700,500);
+        nakresliRovnostrannyTrojuhelnik(230, Color.yellow);
 
-        nakresliObdelnik(100, 200, Color.red);
 
-        zofka.setLocation(1000,500);
 
-        nakresliKruznici(3, Color.blue);
+        //sněhulák
+
+
+        zofka.setLocation(600,200);
+
+        zofka.turnLeft(180);
+        nakresliKruznici(1.5, Color.blue);
+
+        zofka.turnLeft(180);
+        nakresliKruznici(2, Color.blue);
+
+        for (int i = 0; i < 90; i++) {
+            zofka.move(2);
+            zofka.turnRight(1);
+        }
+
+        zofka.turnRight(180);
+        nakresliKruznici(0.5, Color.blue);
+        zofka.turnRight(180);
+
+        for (int i = 0; i < 180; i++) {
+            zofka.move(2);
+            zofka.turnRight(1);
+        }
+
+        zofka.turnRight(180);
+        nakresliKruznici(0.5, Color.blue);
+
+        for (int i = 0; i < 90; i++) {
+            zofka.move(2);
+            zofka.turnLeft(1);
+        }
+
+        nakresliKruznici(2.5, Color.blue);
+
+
+        //vlak
+
+
+        zofka.setLocation(1500,600);
+        zofka.turnLeft(90);
+
+        nakresliObdelnik(300, 200, Color.green);
+
+        nakresliKruznici(1.75, Color.green);
+
+        zofka.turnLeft(90);
+
+        nakresliObdelnik(350, 150, Color.green);
+
+        zofka.move(100);
+        zofka.turnRight(180);
+        nakresliKruznici(0.7, Color.green);
+        zofka.turnRight(180);
+
+        zofka.move(100);
+        zofka.turnRight(180);
+        nakresliKruznici(0.7, Color.green);
+        zofka.turnRight(180);
+
+        zofka.move(100);
+        zofka.turnRight(180);
+        nakresliKruznici(0.7, Color.green);
+        zofka.turnRight(180);
+
+        zofka.penUp();
+        zofka.move(200);
+        zofka.turnLeft(90);
+        zofka.move(40);
+        zofka.turnLeft(135);
+        zofka.penDown();
+
+        nakresliRovnostrannyPravouhlyTrojuhelnik(150, Color.green);
+
+
+
+
+    }
+
+    private void nakresliRovnostrannyPravouhlyTrojuhelnik(double delkaStrany, Color barva) {
+        var velikostPrepony = Math.sqrt(2*Math.pow(delkaStrany, 2));
+
+            zofka.setPenColor(barva);
+            zofka.move(velikostPrepony);
+            zofka.turnRight(135);
+            zofka.move(delkaStrany);
+            zofka.turnRight(90);
+            zofka.move(delkaStrany);
+
 
     }
 
